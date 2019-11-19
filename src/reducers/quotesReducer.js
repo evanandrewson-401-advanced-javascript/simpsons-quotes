@@ -10,7 +10,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case UPDATE_QUOTE:
-      return { ...state, ...action.payload };
+      return { ...state, quote: action.payload[0].quote, characterName: action.payload[0].character, characterImage: action.payload[0].image };
     case UPDATE_QUOTE_LOADING:
     case UPDATE_QUOTE_DONE:
       return { ...state, loading: !state.loading };
