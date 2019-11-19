@@ -1,6 +1,8 @@
 const initialState = {
   loading: false,
-  quotesList: [],
+  quote: '',
+  characterName: '',
+  characterImage: '',
 };
 
 export default function reducer(state = initialState, action) {

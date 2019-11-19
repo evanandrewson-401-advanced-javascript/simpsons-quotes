@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Quote from '../components/quote/Quote';
 import { connect } from 'http2';
+import { getLoading, getCharacterImage, getCharacterName, getQuote } from '../selectors/quoteSelectors';
 
 class SimpsonsQuote extends Component {
   render() {
@@ -20,6 +21,7 @@ const mapStateToProps = state => ({
   quote: getQuote(state),
   characterName: getCharacterName(state),
   characterImage: getCharacterImage(state),
+  loading: getLoading(state)
 });
 
 const mapDispatchToProps = dispatch => ({

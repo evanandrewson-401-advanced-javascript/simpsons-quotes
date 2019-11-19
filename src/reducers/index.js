@@ -1,6 +1,6 @@
 import { combineReducers } from 'react';
-import quotes from './quotesReducer';
+import quoteState from './quotesReducer';
 
 export default combineReducers({
-  quotes
+  quoteState
 });
