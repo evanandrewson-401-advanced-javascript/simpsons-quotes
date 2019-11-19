@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Quote from '../components/quote/Quote';
 import { connect } from 'http2';
 import { getLoading, getCharacterImage, getCharacterName, getQuote } from '../selectors/quoteSelectors';
+import { setQuotePromise } from '../actions/quoteDataActions';
 
 class SimpsonsQuote extends Component {
   render() {
@@ -26,7 +27,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchQuote() {
-    dispatch(newQuote());
+    dispatch(setQuotePromise());
   }
 });
 
